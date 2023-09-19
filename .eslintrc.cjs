@@ -30,11 +30,7 @@ module.exports = {
   },
   plugins: ["@typescript-eslint", "react", "react-refresh", "prettier"],
   rules: {
-    "react/react-in-jsx-scope": "off",
-    "react-refresh/only-export-components": [
-      "warn",
-      { allowConstantExport: true },
-    ],
+    // Typescript rules
     "@typescript-eslint/no-unused-vars": [
       "warn",
       {
@@ -44,19 +40,32 @@ module.exports = {
         caughtErrorsIgnorePattern: "^_",
       },
     ],
-    "no-empty": "off",
+    "@typescript-eslint/no-this-alias": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/ban-types": "off",
+
+    // Eslint rules
+    "no-empty": "off",
     "prefer-const": "warn",
     "no-extra-semi": "off",
     "no-extra-boolean-cast": "off",
-    "@typescript-eslint/no-this-alias": "off",
+
+    // Eslint-comments rules
     "eslint-comments/no-unused-disable": "warn",
+
+    // React rules
+    "react/react-in-jsx-scope": "off",
+    "react-refresh/only-export-components": [
+      "warn",
+      { allowConstantExport: true },
+    ],
+
+    // Prettier rules
     "prettier/prettier": [
-      "error",
+      "warn",
       {
-        "endOfLine": "auto"
-      }
-    ]
+        endOfLine: "auto",
+      },
+    ],
   },
 }
