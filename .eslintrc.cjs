@@ -52,5 +52,11 @@ module.exports = {
     "no-extra-boolean-cast": "off",
     "@typescript-eslint/no-this-alias": "off",
     "eslint-comments/no-unused-disable": "warn",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
   },
 }
