@@ -23,7 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-local
 dev-dist
 
 .eslintcache

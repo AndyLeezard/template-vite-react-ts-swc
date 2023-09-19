@@ -26,10 +26,11 @@
     
     /* Custom */
     "allowJs": false,
-    "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": false,
+    
+    // "esModuleInterop": false,
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
