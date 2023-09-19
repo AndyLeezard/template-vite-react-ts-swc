@@ -4,6 +4,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
+    "plugin:eslint-comments/recommended",
     'plugin:react-hooks/recommended',
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
@@ -14,5 +15,22 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        ignoreRestSiblings: true,
+        argsIgnorePattern: "^_",
+        varsIgnorePattern: "^_",
+        caughtErrorsIgnorePattern: "^_",
+      },
+    ],
+    "no-empty": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/ban-types": "off",
+    "prefer-const": "warn",
+    "no-extra-semi": "off",
+    "no-extra-boolean-cast": "off",
+    "@typescript-eslint/no-this-alias": "off",
+    "eslint-comments/no-unused-disable": "warn",
   },
 }
